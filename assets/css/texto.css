@@ -1,0 +1,41 @@
+h1, h2, h3, p{
+    margin: 0;
+    padding: 0;
+}
+
+span.trio-titulo *{
+    margin: 0;
+    padding: 0;
+}
+
+.txt-roxo{
+    color: #a54ece;
+    font-size: 0.92rem;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+}
+
+.titulo-pri{
+    font-size: clamp(2.5rem, 4.5vw, 3.5rem);
+    font-weight: 800;
+    line-height: 0.98;
+    color: #ffffff;
+    text-shadow: 0 24px 90px rgba(86, 28, 149, 0.22);
+}
+
+.titulo-seg{
+    color: #a3a3a3;
+    font-weight: 500;
+    font-size: 1.05rem;
+    max-width: 700px;
+}
+
+.titulo-pri.pequeno{
+    font-size: 1cqw;
+}
+
+.txt-default{
+    font-size: .8cqw;
+    color: #a3a3a3;
+}
