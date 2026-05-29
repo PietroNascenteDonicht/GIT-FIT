@@ -39,7 +39,7 @@ executeAll()
 
 
 function render(url){
-    return(fetch(url))
+    return(fetch('/views/' + url))
     .then(Response => {return Response.text()})
 }
 
