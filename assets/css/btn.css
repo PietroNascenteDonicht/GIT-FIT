@@ -9,6 +9,12 @@
   justify-content: center;
 }
 
+.btn svg{
+  height: 14px;
+  align-self: center;
+  margin-left: 10px;
+}
+
 .btn:hover,
 .btn:focus-visible {
   transform: translateY(-1px);
