@@ -82,7 +82,7 @@ html, body {
   transform: translateY(-1px);
 }
 
-.main-nav a.active {    
+.main-nav a.ativo {    
   color: #662b81;
   background-color: #52216957;
   border-radius: 8px;
