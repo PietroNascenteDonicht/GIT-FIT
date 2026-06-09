@@ -1,0 +1,112 @@
+.modal-backdrop{
+    position: fixed;
+    inset: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: rgba(0,0,0,.45);
+
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+
+    z-index: 999;
+}
+
+.modal{
+    width: min(90vw, 500px);
+
+    padding: 2rem;
+
+    background: rgba(20,20,20,.85);
+
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+
+    border: 1px solid rgba(255,255,255,.08);
+    border-radius: 24px;
+
+    overflow: hidden;
+    position: fixed;
+
+    right: 20px;
+    bottom: 20px;
+
+    width: 400px;
+
+    box-shadow:
+        0 20px 40px rgba(0,0,0,.35);
+
+    animation: modalOpen .25s ease;
+
+    text-align: center;
+
+    z-index: 1000;
+}
+
+.modal::before{
+    content: '';
+
+    position: absolute;
+
+    width: 250px;
+    height: 250px;
+
+    top: -120px;
+    right: -120px;
+
+    border-radius: 50%;
+
+    background: radial-gradient(
+        rgba(168,85,247,.12),
+        transparent 70%
+    );
+
+    pointer-events: none;
+}
+
+.modal h1{
+    margin: 0 0 .75rem;
+
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.modal p{
+    margin: 0;
+
+    color: rgba(255,255,255,.75);
+
+    line-height: 1.6;
+}
+
+/* INFO */
+
+.modal.info h1{
+    color: #a855f7;
+}
+
+/* SUCESSO */
+
+.modal.sucesso h1{
+    color: #c084fc;
+}
+
+/* ERRO */
+
+.modal.erro h1{
+    color: #f87171;
+}
+
+@keyframes modalOpen{
+    from{
+        opacity: 0;
+        transform: translateY(-15px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

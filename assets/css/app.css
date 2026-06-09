@@ -1,6 +1,10 @@
 @import url("header.css");
 @import url("footer.css");
 @import url("btn.css");
-@import url("planos.css");
 @import url("texto.css");
+@import url("modal.css");
 @import url("utility.css");
+
+main{
+    padding-top: 20dvh !important;
+}
