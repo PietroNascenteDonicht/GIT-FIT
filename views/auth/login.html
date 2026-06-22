@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="/assets/css/login.css">
+    <script src="/assets/js/main.js" defer></script>
+    <script src="/assets/js/auth/login.js" defer></script>
+</head>
+<body>
+    <main>
+        <form id="login">
+            <h1>Login</h1>
+
+            <div class="campo">
+                <label>Email</label>
+                <input name="email" type="email" placeholder="Digite seu email">
+            </div>
+
+            <div class="campo">
+                <label>Senha</label>
+                <input name="senha" type="password" placeholder="Digite sua senha">
+            </div>
+
+            <button type="submit">Entrar</button>
+
+            <p>
+                Não possui uma conta?
+                <a href="/views/auth/cadastro.html">Cadastre-se</a>
+            </p>
+        </form>
+    </main>
+</body>
+</html>
