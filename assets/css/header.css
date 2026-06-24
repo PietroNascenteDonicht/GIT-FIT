@@ -18,14 +18,16 @@ html, body {
 
 .site-header {
   width: 100%;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-  padding: 20px 32px;
+  border-bottom: 1px solid #521874;
+  padding: 20px;
   background-color: #000;
+  position: fixed;
+  z-index: 999;
 }
 
 .header-inner {
   max-width: 1200px;
-  margin: 0 auto;
+  margin: 0 18dvw;
   display: flex;
   align-items: center;
   gap: 32px;

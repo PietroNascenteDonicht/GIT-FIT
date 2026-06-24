@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hipertrofia Total - Superiores | GIT-FIT</title>
+    <script src="/assets/js/main.js" defer></script>
+    <script type="module" src="/assets/js/treinos.js"></script>
+    <script type="module" src="/assets/js/detalhe.js"></script>
+    <link rel="stylesheet" href="/assets/css/app.css">
+    <link rel="stylesheet" href="/assets/css/treino.css">
+</head>
+<body>
+    {{render(layout/header.html)}}
+    <main class="fundo-degrade detalhe-treino-page">
+        <section class="detalhe-hero">
+            <a href="/views/treinos/index.html" class="voltar-link">← Voltar para Treinos</a>
+
+            <div class="tags-hero">
+                <span class="tag-pill">Hipertrofia</span>
+                <span class="tag-pill tag-secondary">Intermediário</span>
+            </div>
+
+            <h1 class="titulo-pri" id="detalhe-titulo">Hipertrofia Total – Superiores</h1>
+
+            <p id="descricao-detalhe">
+                Treino focado em volume muscular para membros superiores com exercícios compostos e isolados. Ideal para quem busca ganho de massa muscular com carga progressiva.
+            </p>
+
+            <div class="info-meta">
+                <span><img src="/assets/img/relogio.svg" alt="Relógio" class="icon-metadata"><p id="min">60 minutos</p></span>
+                <span><img src="/assets/img/fogo.svg" alt="Fogo" class="icon-metadata"><p id="kcal">420 kcal</p></span>
+                <span><img src="/assets/img/exercicio.svg" alt="Exercícios" class="icon-metadata"><p id="exec">8 exercícios</p></span>
+            </div>
+
+            <a href="#" class="btn btn-primary detalhe-btn">Iniciar Treino</a>
+        </section>
+
+        <section id="exercicios-lista" class="exercicios-lista">
+        </section>
+    </main>
+    {{render(layout/footer.html)}}
+</body>
+</html>

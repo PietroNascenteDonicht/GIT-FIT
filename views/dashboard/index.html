@@ -6,7 +6,11 @@
     <title>Document</title>
     <link rel="stylesheet" href="/assets/css/app.css">
     <script src="/assets/js/main.js" defer></script>
-    <script src="/assets/js/header.js" defer></script>
+    {{loadAssets(css, app.css)}}
+    {{loadAssets(css, dashboard.css)}}
+    {{loadAssets(js, header.js)}}
+    {{loadAssets(js, dashboard.js)}}
+    {{loadAssets(js, chart.js, true, false)}}
 </head>
 <body data-page="dashboard">
     {{render(layout/header.html)}}

@@ -1,0 +1,423 @@
+main{
+    padding: 20dvh 18dvw !important;    
+}
+
+.hero-treinos {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* BUSCA */
+
+.input-busca {
+    width: 100%;
+    height: 56px;
+
+    margin-top: 40px;
+    padding: 0 20px;
+
+    border: 1px solid rgba(255,255,255,.1);
+    border-radius: 16px;
+
+    background: rgba(255,255,255,.03);
+
+    color: white;
+    font-size: 1rem;
+
+    outline: none;
+    transition: .2s;
+}
+
+.input-busca:focus {
+    border-color: #8b5cf6;
+}
+
+.input-busca::placeholder {
+    color: #888;
+}
+
+/* FILTROS */
+
+.filtros {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+
+    margin-top: 24px;
+}
+
+.filtros span {
+    color: #cfcfcf;
+    font-size: .95rem;
+}
+
+.filtros button {
+    border: none;
+
+    padding: 8px 16px;
+
+    border-radius: 999px;
+
+    background: #18181b;
+
+    color: #d4d4d8;
+
+    cursor: pointer;
+
+    transition: .2s;
+}
+
+.filtros button:hover {
+    background: #27272a;
+}
+
+.filtros button.active {
+    background: #7c3aed;
+    color: white;
+}
+
+/* CONTADOR */
+
+.qtd-treinos {
+    margin-top: 40px;
+
+    color: #a1a1aa;
+    font-size: .95rem;
+}
+
+/* GRID DOS TREINOS */
+
+#lista-treinos {
+    display: grid;
+
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+
+    gap: 24px;
+
+    margin-top: 30px;
+}
+
+/* CARD */
+
+.card-treino {
+    background: rgba(255,255,255,.02);
+
+    border: 1px solid rgba(255,255,255,.08);
+
+    border-radius: 24px;
+
+    padding: 24px;
+
+    transition: .25s;
+}
+
+.card-treino:hover {
+    transform: translateY(-4px);
+
+    border-color: rgba(139,92,246,.4);
+}
+
+.card-treino h2 {
+    margin-bottom: 12px;
+
+    color: white;
+    font-size: 1.4rem;
+}
+
+.card-treino p {
+    line-height: 1.6;
+
+    color: #a1a1aa;
+
+    margin-bottom: 20px;
+}
+
+/* INFORMAÇÕES */
+
+.info-treino {
+    display: flex;
+    gap: 18px;
+
+    margin-bottom: 16px;
+
+    color: #d4d4d8;
+}
+
+.info-treino span {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+/* TAGS */
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+
+    margin-bottom: 20px;
+}
+
+.tag {
+    background: #18181b;
+
+    color: #d4d4d8;
+
+    padding: 6px 12px;
+
+    border-radius: 999px;
+
+    font-size: .85rem;
+}
+
+/* LINK */
+
+.card-treino{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.card-treino a {
+    color: #9333ea;
+
+    text-decoration: none;
+
+    font-weight: 600;
+}
+
+.card-treino a:hover {
+    color: #a855f7;
+}
+
+.card-treino span{
+    display: flex;
+    column-gap: 5%;
+    margin-bottom: 5%;
+}
+
+.card-treino span i{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.label-list{
+    display: flex;
+    gap: 5%;
+}
+
+.card-treino .label-list p{
+    margin: 0;
+    padding: 0;
+}
+
+/* Detalhe de treino sem JavaScript */
+.detalhe-hero {
+    max-width: 960px;
+    margin: 0 0 50px;
+    padding: 2rem 1.5rem;
+}
+
+.voltar-link {
+    display: inline-block;
+    color: #d4d4d8;
+    margin-bottom: 24px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.tags-hero {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.tag-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 16px;
+    border-radius: 999px;
+    background: rgba(124, 58, 237, 0.16);
+    color: #ffffff;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+.tag-secondary {
+    background: rgba(255, 255, 255, 0.08);
+}
+
+#detalhe-titulo {
+    margin: 0 0 20px;
+}
+
+#descricao-detalhe {
+    max-width: 720px;
+    color: #cfcfcf;
+    line-height: 1.8;
+    margin-bottom: 32px;
+    font-size: 1rem;
+}
+
+.info-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 22px;
+    align-items: center;
+    margin-bottom: 36px;
+    color: #d4d4d8;
+    font-weight: 600;
+    font-size: 0.98rem;
+}
+
+.info-meta span {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.icon-metadata {
+    width: 20px;
+    height: auto;
+}
+
+.detalhe-btn {
+    max-width: 220px;
+    margin-top: 10px;
+    text-decoration: none;
+}
+
+.exercicios-lista {
+    max-width: 960px;
+}
+
+.exercicios-lista h2 {
+    color: #ffffff;
+    margin-bottom: 24px;
+    font-size: clamp(2rem, 3vw, 2.5rem);
+}
+
+.exercicio-card {
+    position: relative;
+    background: rgba(255,255,255,0.02);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 24px;
+    padding: 22px 24px;
+    margin-bottom: 16px;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity .4s ease, transform .4s ease, border-color .3s ease, box-shadow .3s ease, background .3s ease;
+}
+
+.exercicio-card.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.exercicio-card:hover {
+    border-color: rgba(139, 92, 246, .4);
+    transform: translateY(-4px);
+}
+
+.exercicio-card.is-open {
+    border-color: rgba(124, 58, 237, 0.9);
+    box-shadow: 0 20px 40px rgba(0,0,0,.2);
+}
+
+.exercicio-card-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 18px;
+    margin-bottom: 10px;
+}
+
+.ex-num {
+    display: inline-flex;
+    width: 36px;
+    height: 36px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: rgba(124, 58, 237, 0.25);
+    color: #ffffff;
+    font-weight: 700;
+}
+
+.exercicio-card strong {
+    color: #ffffff;
+    font-size: 1rem;
+}
+
+.toggle-icon {
+    width: 18px;
+    height: auto;
+    transition: transform .3s ease;
+}
+
+.exercicio-card.is-open .toggle-icon {
+    transform: rotate(180deg);
+}
+
+.exercicio-card-details {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transform: translateY(-10px);
+    transition: max-height .35s ease, opacity .35s ease, transform .35s ease;
+}
+
+.exercicio-card.is-open .exercicio-card-details {
+    max-height: 260px;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.exercicio-card-details p {
+    margin: 0;
+    color: #d4d4d8;
+    line-height: 1.75;
+    font-size: .95rem;
+}
+
+.detalhes-list {
+    display: grid;
+    gap: 10px;
+    margin-top: 14px;
+}
+
+.detalhes-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 14px;
+    border-radius: 18px;
+    background: rgba(255,255,255,0.04);
+    color: #cfcfcf;
+    font-size: .92rem;
+}
+
+.detalhes-item strong {
+    font-weight: 600;
+    color: #ffffff;
+}
+
+@media (max-width: 720px) {
+    .info-meta {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .detalhe-hero,
+    .exercicios-lista {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="/assets/js/main.js" defer></script>
+    <script src="/assets/js/header.js"></script>
+    <script src="/assets/js/biblioteca.js" type="module"></script>
+    <script src="/assets/js/treinos.js" type="module"></script>
+    <link rel="stylesheet" href="/assets/css/app.css">
+    <link rel="stylesheet" href="/assets/css/treino.css">
+</head>
+<body data-page="treinos">
+    {{render(layout/header.html)}}
+    <main class="fundo-degrade">
+        <section class="hero-treinos">
+            <p class="txt-roxo">BIBLIOTECA DE TREINOS</p>
+
+            <h1 class="titulo-pri">
+                Encontre seu treino
+            </h1>
+
+            <h3 class="titulo-seg">
+                Treinos elaborados por profissionais para todos os objetivos e níveis.
+            </h3>
+
+            <input
+                type="text"
+                placeholder="Buscar treino..."
+                class="input-busca"
+            >
+
+            <div class="filtros">
+                <span>Objetivo:</span>
+
+                <button>Todos</button>
+                <button>Hipertrofia</button>
+                <button>Emagrecimento</button>
+                <button>Resistência</button>
+
+                <span>Nível:</span>
+
+                <button>Todos</button>
+                <button>Iniciante</button>
+                <button>Intermediário</button>
+                <button>Avançado</button>
+            </div>
+
+            <div id="lista-treinos"></div>
+        </section>
+    </main>
+    {{render(layout/footer.html)}}
+</body>
+</html>

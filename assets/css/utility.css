@@ -1,3 +1,11 @@
+.fundo-degrade{
+    min-height: calc(100vh - 80px);
+    padding: 10rem 1.5rem 5rem;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(180deg, #260A3A, #0A0A0A 70dvh, #0A0A0A);
+}
+
 .div-default{
     background-color: #121212;
     border: 1px solid;
