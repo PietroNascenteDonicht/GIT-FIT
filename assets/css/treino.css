@@ -52,6 +52,30 @@ main{
     font-size: .95rem;
 }
 
+.filtros label {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 14px;
+    border-radius: 999px;
+    background: #18181b;
+    color: #d4d4d8;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.filtros label:hover {
+    background: #27272a;
+}
+
+.filtros input[type="checkbox"],
+.filtros input[type="radio"] {
+    accent-color: #7c3aed;
+    cursor: pointer;
+    width: 16px;
+    height: 16px;
+}
+
 .filtros button {
     border: none;
 
@@ -408,6 +432,10 @@ main{
 .detalhes-item strong {
     font-weight: 600;
     color: #ffffff;
+}
+
+.detalhe-input{
+    padding: 2%;
 }
 
 @media (max-width: 720px) {

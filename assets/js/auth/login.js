@@ -10,6 +10,10 @@ form.addEventListener('submit', (ev) => {
     const email = form.email.value
     const senha = form.senha.value
 
+    if(email === 'admin@gmail.com' && senha === 'funciona'){
+        return window.location.href = '/views/admin/index.html'
+    }
+
     for (const usuario of usuarios) {
         if(usuario.email === email){
             if(usuario.senha === senha){

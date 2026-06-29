@@ -37,14 +37,14 @@ window.addEventListener('templatePronto', () => {
 
         for(let i = 1; i < exec.series; i++){
             series += `
-                <div class="detalhes-item"><span><input placeholder="KG"></span><strong>${exec.reps}</strong></div>
+                <div class="detalhes-item"><span><input placeholder="KG" class="detalhe-input"></span><strong>${exec.reps}</strong></div>
             `
         }
 
         card.innerHTML = `
             <div class="exercicio-card-top">
                 <span class="ex-num">${i + 1}</span>
-                <strong>${exec.nome}</strong>
+                <strong>${exec.name}</strong>
                 <img class="toggle-icon" src="/assets/img/down-arrow.svg" alt="Abrir detalhes">
             </div>
             <div class="exercicio-card-details">

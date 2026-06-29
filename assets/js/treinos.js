@@ -1,7 +1,8 @@
-export function createTreino({title, labels, desc, time, kcal, exercicios, musculos}){
+export function createTreino({title, dificuldade, objetivo, desc, time, kcal, exercicios, musculos}){
     const treino = {
         title: title,
-        labels: labels,
+        dificuldade: dificuldade,
+        objetivo: objetivo,
         desc: desc,
         time: time,
         kcal: kcal, 
@@ -16,8 +17,19 @@ export function createTreino({title, labels, desc, time, kcal, exercicios, muscu
     localStorage.setItem('treinos', JSON.stringify(treinos))
 }
 
-export function getTreinos(){
-    return JSON.parse(localStorage.getItem('treinos'))
+/**
+ * pega os treinos, se params existir busca conforme
+ * @param {Array} params - [objetivo, nivel]
+ * @returns {Array} array de treinos (obj)
+ */
+export function getTreinos(params = ''){
+    let treinos = JSON.parse(localStorage.getItem('treinos'))
+
+    if(params !== ''){
+        treinos.filter(t => t.labels[0] === params[0])
+    }
+    
+    return treinos
 }
 
 export function addExercise(idTreino, exercicio){
