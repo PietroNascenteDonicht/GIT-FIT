@@ -1,10 +1,13 @@
-function callModal(type = 'info', text = 'TESTE', blur = false){
-    body = document.querySelector('body')
+export function callModal(type = 'info', text = 'TESTE', blur = false){
+    const body = document.querySelector('body')
 
-    if(blur){
-        const modalBlur = document.createElement('div')
+    if (!body) return;
+
+    let modalBlur = null;
+
+    if (blur) {
+        modalBlur = document.createElement('div')
         modalBlur.classList.add('modal-backdrop')
-
         body.appendChild(modalBlur)
     }
 
@@ -19,12 +22,14 @@ function callModal(type = 'info', text = 'TESTE', blur = false){
     modal.appendChild(mensagem)
 
     titulo.textContent = type.charAt(0).toUpperCase() + type.slice(1);
+
     switch (type) {
         case 'erro':
             modal.classList.add('erro')
             break;
 
         case 'sucess':
+        case 'success':
             modal.classList.add('sucesso')
             break;
 
@@ -33,4 +38,11 @@ function callModal(type = 'info', text = 'TESTE', blur = false){
     }
 
     body.appendChild(modal)
+
+    setTimeout(() => {
+        modal.remove()
+        if (modalBlur) {
+            modalBlur.remove()
+        }
+    }, 2500)
 }
