@@ -1,0 +1,367 @@
+/*=========================
+    GOOGLE FONT
+==========================*/
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+/*=========================
+        RESET
+==========================*/
+
+
+:root {
+    --bg: #080b16;
+    --card: rgba(255, 255, 255, .03);
+    --border: rgba(255, 255, 255, .08);
+
+    --purple: #8b5cf6;
+    --purple-light: #a855f7;
+
+    --text: #ffffff;
+    --muted: #94a3b8;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: #07070a;
+    color: #fff;
+    overflow-x: hidden;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    width: 900px;
+    height: 900px;
+    background: #8B5CF6;
+    top: -250px;
+    left: -250px;
+    filter: blur(180px);
+    opacity: .18;
+    z-index: -2;
+}
+
+body::after {
+    content: "";
+    position: fixed;
+    width: 700px;
+    height: 700px;
+    background: #A855F7;
+    right: -250px;
+    bottom: -250px;
+    filter: blur(180px);
+    opacity: .12;
+    z-index: -2;
+}
+
+.agenda {
+    max-width: 1400px;
+    margin: auto;
+    padding: 60px 40px;
+    position: relative;
+
+}
+
+.agenda::before {
+    content: "";
+    position: absolute;
+    width: 700px;
+    height: 700px;
+    background: radial-gradient(circle,
+            rgba(139, 92, 246, .20),
+            transparent 70%);
+    filter: blur(100px);
+    top: -250px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -1;
+}
+
+.tag {
+    color: #A855F7;
+    font-size: 13px;
+    letter-spacing: 5px;
+    font-weight: 600;
+}
+
+.agenda-header h2 {
+    font-size: 72px;
+    font-weight: 900;
+    line-height: 1.05;
+    letter-spacing: -2px;
+    margin: 20px 0 25px;
+}
+
+.agenda-header p {
+    font-size: 20px;
+    line-height: 1.8;
+    color: #A1A1AA;
+    max-width: 620px;
+    margin-bottom: 45px;
+}
+
+
+.calendario {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 30px;
+    padding: 25px;
+    backdrop-filter: blur(20px);
+
+    display: flex;
+    flex-direction: column;
+
+    margin-bottom: 40px;
+}
+
+.topo-calendario {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 25px;
+}
+
+.semana-titulo {
+    font-size: 20px;
+    font-weight: 700;
+    color: white;
+    letter-spacing: -0.5px;
+}
+
+.nav-btn {
+    width: 50px;
+    height: 50px;
+
+    border: none;
+    border-radius: 15px;
+
+    background: rgba(255, 255, 255, .05);
+
+    color: white;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.nav-btn:hover {
+    background: var(--purple);
+}
+
+.semana {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 15px;
+}
+
+.dia {
+    background: rgba(255, 255, 255, .04);
+    border: 1px solid rgba(255, 255, 255, .05);
+
+    border-radius: 20px;
+    padding: 20px;
+
+    text-align: center;
+    cursor: pointer;
+
+    transition: .3s;
+}
+
+.dia:hover {
+    transform: translateY(-3px);
+    border-color: rgba(139, 92, 246, .4);
+}
+
+.dia span {
+    display: block;
+    color: var(--muted);
+    font-size: .85rem;
+    margin-bottom: 10px;
+}
+
+.dia h3 {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.dia.ativo {
+    background: linear-gradient(135deg,
+            var(--purple),
+            var(--purple-light));
+
+    box-shadow: 0 0 30px rgba(139, 92, 246, .5);
+}
+
+.dia.ativo span,
+.dia.ativo h3 {
+    color: white;
+}
+
+.dot {
+    width: 8px;
+    height: 8px;
+    background: white;
+    border-radius: 50%;
+    margin: 10px auto 0;
+}
+
+.titulo-dia {
+    font-size: 1.8rem;
+    margin-bottom: 25px;
+}
+
+.lista-aulas {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.aula-card {
+    background: var(--card);
+
+    border: 1px solid var(--border);
+
+    border-radius: 28px;
+
+    padding: 30px;
+
+    display: flex;
+    align-items: center;
+    gap: 25px;
+
+    backdrop-filter: blur(20px);
+
+    transition: .3s;
+}
+
+.aula-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(139, 92, 246, .4);
+}
+
+.barra {
+    width: 6px;
+    height: 80px;
+    border-radius: 999px;
+}
+
+.funcional {
+    background: #34d399;
+}
+
+.spinning {
+    background: #fb7185;
+}
+
+.yoga {
+    background: #a855f7;
+}
+
+.hitt {
+    background: #d5f34d;
+}
+
+.pilates {
+    background: #558ef7;
+}
+
+.boxe {
+    background: #f56578;
+}
+
+.horario {
+    min-width: 110px;
+}
+
+.horario h3 {
+    font-size: 2rem;
+    font-weight: 800;
+}
+
+.horario span {
+    color: var(--muted);
+}
+
+.info {
+    flex: 1;
+}
+
+.info h4 {
+    font-size: 1.7rem;
+    margin-bottom: 5px;
+}
+
+.info p {
+    color: var(--muted);
+    margin-bottom: 10px;
+}
+
+.meta {
+    display: flex;
+    gap: 25px;
+    color: #d1d5db;
+    font-size: .95rem;
+}
+
+/* BOTÃO */
+
+.btn-reservar {
+    border: none;
+    padding: 16px 32px;
+    border-radius: 18px;
+    background: linear-gradient(135deg,
+            var(--purple),
+            var(--purple-light));
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.btn-reservar:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px rgba(139, 92, 246, .5);
+}
+
+.aula-card.reservada {
+    background: #6a0dad;
+    /* roxo */
+    color: white;
+    transition: 0.3s ease;
+}
+
+.aula-card.reservada h3,
+.aula-card.reservada h4,
+.aula-card.reservada p,
+.aula-card.reservada span {
+    color: white;
+}
+
+.btn-reservar.cancelar {
+    background: red;
+    color: white;
+    border: none;
+}
+
+@media(max-width:900px) {
+
+    .agenda-header h1 {
+        font-size: 3rem;
+    }
+
+    .semana {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .aula-card {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+}
