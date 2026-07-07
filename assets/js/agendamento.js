@@ -1,9 +1,12 @@
 window.addEventListener("templatePronto", () => {
 
+
+    // guarda os nomes das chaves usadas no localstorege
         const usuario = "usuario_padrao";
         const LS_RESERVAS = `reservas_${usuario}`;
         const LS_ESTADO = `estadoAulas_${usuario}`;
         const LS_SEMANA = `semana_${usuario}`;
+
 
     
         const lista = document.querySelector(".lista-aulas");
@@ -16,7 +19,7 @@ window.addEventListener("templatePronto", () => {
         const mapaDias = ["dom", "seg", "ter", "qua", "qui", "sex", "sab"];
 
       
-        let semanaOffset = Number(localStorage.getItem(LS_SEMANA)) || 0;
+        let semanaOffset = Number(localStorage.getItem(LS_SEMANA)) || 0; // recupera a semana que o usuario estava.
         let reservas = JSON.parse(localStorage.getItem(LS_RESERVAS)) || [];
         let estadoAulas = JSON.parse(localStorage.getItem(LS_ESTADO)) || {};
         let diaSelecionadoIndex = 1; // começa na segunda
@@ -42,13 +45,13 @@ window.addEventListener("templatePronto", () => {
             { dia: "sab", hora: "09:00", nome: "Funcional", professor: "Sérgio Fujii", duracao: 45, vagas: 25 }
         ];
 
-      
+      // calcula qual função monstrar
         function getSemana(offset = 0) {
             const hoje = new Date();
-            hoje.setDate(hoje.getDate() + offset * 7);
+            hoje.setDate(hoje.getDate() + offset * 7); // avança ou volta semanas
 
             const inicio = new Date(hoje);
-            inicio.setDate(hoje.getDate() - hoje.getDay());
+            inicio.setDate(hoje.getDate() - hoje.getDay()); // descobre o domingo
 
             const fim = new Date(inicio);
             fim.setDate(inicio.getDate() + 6);
@@ -56,7 +59,7 @@ window.addEventListener("templatePronto", () => {
             return { inicio, fim };
         }
 
-        function formatarData(data) {
+        function formatarData(data) { 
             return data.toISOString().split("T")[0];
         }
 
@@ -65,7 +68,7 @@ window.addEventListener("templatePronto", () => {
             const { inicio, fim } = getSemana(semanaOffset);
 
             semanaTitulo.textContent =
-                `${inicio.toLocaleDateString("pt-BR")} – ${fim.toLocaleDateString("pt-BR")}`;
+                `${inicio.toLocaleDateString("")} – ${fim.toLocaleDateString("")}`;
 
             diasHTML.forEach((diaEl, index) => {
                 const data = new Date(inicio);
@@ -92,10 +95,10 @@ window.addEventListener("templatePronto", () => {
 
             aulasDoDia.forEach(aula => {
                 const id = `${dataSelecionada}-${aula.nome}-${aula.hora}`;
-                const reservada = reservas.includes(id);
+                const reservada = reservas.includes(id); //verifica
 
                 let vagasAtuais = estadoAulas[id]?.vagas ?? aula.vagas;
-                if (reservada) vagasAtuais--;
+                if (reservada) vagasAtuais--; // calcula vaga
 
                 lista.innerHTML += `
                 <div class="aula-card ${reservada ? "reservada" : ""}" data-id="${id}">
