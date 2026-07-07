@@ -7,8 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title> GIT-FIT</title>
+    <script type="module" src="/assets/js/main.js" defer></script>
 
-    <link rel="stylesheet" href="inicio.css">
+    <link rel="stylesheet" href="/assets/css/inicio.css">
+    <link rel="stylesheet" href="/assets/css/app.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
 
@@ -22,6 +24,8 @@
 </head>
 
 <body>
+
+    {{render(layout/header.html)}}
 
     <section class="hero">
 
@@ -53,15 +57,12 @@
 
                 <div class="hero-buttons">
 
-                    <a href="#" class="btn-primary">
+                    <a href="/views/auth/cadastro.html" class="btn-primary">
 
                         Começar Agora
-
-                        <i class="fa-solid fa-arrow-right"></i>
-
                     </a>
 
-                    <a href="#" class="btn-secondary">
+                    <a href="/views/planos/index.html" class="btn-secondary">
 
                         Ver Treinos >
 
@@ -268,9 +269,9 @@
 
         <div class="comunidade-imagens">
 
-            <img src="imgs/IMG_2250.JPG" alt="Treino">
+            <img src="/assets/img/IMG_2250.JPG" alt="Treino">
 
-            <img src="imgs/IMG_2248.JPG" alt="Academia">
+            <img src="/assets/img/IMG_2248.JPG" alt="Academia">
 
         </div>
 
@@ -367,7 +368,7 @@
 
                 </ul>
 
-                <a href="#" class="btn-secondary">
+                <a href="/views/planos/index.html" class="btn-secondary">
 
                     Assinar Básico
 
@@ -404,7 +405,7 @@
 
                 </ul>
 
-                <a href="#" class="btn-primary">
+                <a href="/views/planos/index.html" class="btn-primary">
 
                     Assinar Pro
 
@@ -436,7 +437,7 @@
 
                 </ul>
 
-                <a href="#" class="btn-secondary">
+                <a href="/views/planos/index.html" class="btn-secondary">
 
                     Assinar Elite
                 </a>
@@ -605,39 +606,7 @@
 
     </section>
 
-    <!-- ===========================
-     CTA
-=========================== -->
-
-    <section class="cta">
-
-        <div class="cta-card">
-
-            <h2>
-
-                Pronto para começar a sua transformção?
-
-            </h2>
-
-
-
-            <p>
-
-                Teste grátis por 7 dias. Sem compromisso, sem cartão de crédito.
-
-            </p>
-
-            <a href="#" class="btn-primary">
-
-                Começar
-
-            </a>
-
-        </div>
-
-
-    </section>
+    {{render (layout/footer.html)}}
 
 </body>
-
 </html>

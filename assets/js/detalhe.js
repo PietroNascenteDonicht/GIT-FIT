@@ -1,3 +1,4 @@
+import { getUsuarioLogado, atualizarUsuario, getUsuarios } from "/assets/js/usuarioLocalstorage.js";
 import { getTreinos } from "/assets/js/treinos.js"
 
 window.addEventListener('templatePronto', () => {
@@ -37,7 +38,7 @@ window.addEventListener('templatePronto', () => {
 
         for(let i = 1; i < exec.series; i++){
             series += `
-                <div class="detalhes-item"><span><input placeholder="KG" class="detalhe-input"></span><strong>${exec.reps}</strong></div>
+                <div class="detalhes-item"><span><input placeholder="KG" class="detalhe-input" required></span><strong>${exec.reps}</strong></div>
             `
         }
 
@@ -64,4 +65,28 @@ window.addEventListener('templatePronto', () => {
 
         setTimeout(() => card.classList.add('show'), i * 80);
     });
+
+    const btnDetalhe = document.querySelector('.detalhe-btn');
+
+    btnDetalhe.addEventListener('click', () => {execLista.requestSubmit()});
+
+
+    execLista.addEventListener('submit', (ev) => {
+        ev.preventDefault()
+        console.log(treino.kcal)
+        return
+        let usuarioLogado = getUsuarioLogado();
+        if(usuarioLogado.calorias){
+            usuarioLogado.calorias += Number(treino.kcal)
+            usuarioLogado.treino += 1
+        }else{
+            usuarioLogado.kcal = Number(treino.kcal)
+            usuarioLogado.treino = 1
+        }
+
+        let usuarios = getUsuarios()
+
+        atualizarUsuario(usuarios, usuarioLogado)
+        window.location.href = '/views/dashboard/index.html'
+    })
 });

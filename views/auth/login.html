@@ -5,8 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <link rel="stylesheet" href="/assets/css/login.css">
-    <script src="/assets/js/main.js" defer></script>
-    <script src="/assets/js/auth/login.js" defer></script>
+    <link rel="stylesheet" href="/assets/css/modal.css">
+    <script type="module"type="module" src="/assets/js/main.js" defer></script>
+    <script type="module"type="module" src="/assets/js/auth/login.js" defer></script>
 </head>
 <body>
     <main>
@@ -15,12 +16,12 @@
 
             <div class="campo">
                 <label>Email</label>
-                <input name="email" type="email" placeholder="Digite seu email">
+                <input name="email" type="email" placeholder="Digite seu email" required>
             </div>
 
             <div class="campo">
                 <label>Senha</label>
-                <input name="senha" type="password" placeholder="Digite sua senha">
+                <input name="senha" type="password" placeholder="Digite sua senha" required>
             </div>
 
             <button type="submit">Entrar</button>

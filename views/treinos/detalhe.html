@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hipertrofia Total - Superiores | GIT-FIT</title>
-    <script src="/assets/js/main.js" defer></script>
+    <script type="module"src="/assets/js/main.js" defer></script>
     <script type="module" src="/assets/js/treinos.js"></script>
     <script type="module" src="/assets/js/detalhe.js"></script>
     <link rel="stylesheet" href="/assets/css/app.css">
@@ -33,14 +33,14 @@
                 <span><img src="/assets/img/exercicio.svg" alt="Exercícios" class="icon-metadata"><p id="exec">8 exercícios</p></span>
             </div>
 
-            <a href="#" class="btn btn-primary detalhe-btn">Iniciar Treino</a>
+            <button class="btn btn-primary detalhe-btn">terminar Treino</button>
 
 
             <div id="grafico"></div>
         </section>
 
-        <section id="exercicios-lista" class="exercicios-lista">
-        </section>
+        <form id="exercicios-lista" class="exercicios-lista">
+        </form>
     </main>
     {{render(layout/footer.html)}}
 </body>

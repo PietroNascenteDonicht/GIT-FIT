@@ -1,15 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Agendamentos</title>
-    <link rel="stylesheet" href="agendamento.css">
-    <script src="agendamento.js" defer></script>
+    <link rel="stylesheet" href="/assets/css/app.css">
+    <script type="module" src="/assets/js/main.js" defer></script>
+    <script src="/assets/js/agendamento.js"></script>
+    <link rel="stylesheet" href="/assets/css/agendamento.css">
 </head>
 
 <body>
+    {{render(layout/header.html)}}
     <section class="agenda">
         <div class="agenda-header">
             <span class="tag">AGENDAMENTO</span>
@@ -79,7 +82,8 @@
         </h2>
 
         <div class="lista-aulas">
-
         </div>
 
     </section>
+    {{render(layout/footer.html)}}
+</body>

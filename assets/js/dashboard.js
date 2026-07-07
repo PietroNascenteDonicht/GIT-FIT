@@ -1,3 +1,5 @@
+import { getUsuarioLogado } from "/assets/js/usuarioLocalstorage.js";
+
 const text = '#797979';
 const lines = '#1e1e1e'
 
@@ -197,9 +199,15 @@ function graficoBar(_div, _label, _valores, _cor, _medida) {
 
 
 window.addEventListener('templatePronto', () => {
-    let usuario = JSON.parse(localStorage.getItem('usuarioLogado'))
+    let usuario = getUsuarioLogado()
 
     document.querySelector('#userName').textContent = usuario.nome
+
+    document.querySelector('#meta h1').textContent = usuario.treino || 0
+
+    document.querySelector('#kcal h1').textContent = usuario.kcal || 0
+
+    console.log(usuario.treino)
 
 
     //cal

@@ -1,3 +1,7 @@
+import { getUsuarioLogado } from "/assets/js/usuarioLocalstorage.js"
+
+let usuario = getUsuarioLogado()
+
 export function createTreino({title, dificuldade, objetivo, desc, time, kcal, exercicios, musculos}){
     const treino = {
         title: title,

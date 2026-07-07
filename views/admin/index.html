@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width,initial-scale=1" />
+	<title>Dashboard - Admin</title>
+    <script type="module" src="/assets/js/main.js" defer></script>
+	<script type="module" src="/assets/js/admin.js"></script>
+    <link rel="stylesheet" href="/assets/css/app.css">
+	<link rel="stylesheet" href="/assets/css/admin-dashboard.css">
+</head>
+<body>
+    {{render(layout/header.html)}}
+	<main class="container main-grid">
+		<div class="page-header">
+			<div class="kicker">PAINEL ADMIN</div>
+			<h1>Dashboard</h1>
+			<div class="status">● Sistema operacional</div>
+		</div>
+
+		<section class="cards">
+			<div class="card">
+				<div class="card-head">Total de Alunos</div>
+				<div class="card-value">5.248</div>
+				<div class="card-foot">↗ +12% este mês</div>
+			</div>
+			<div class="card">
+				<div class="card-head">Receita Mensal</div>
+				<div class="card-value">R$ 58.3k</div>
+				<div class="card-foot">↗ +8% este mês</div>
+			</div>
+			<div class="card">
+				<div class="card-head">Novos este mês</div>
+				<div class="card-value">143</div>
+				<div class="card-foot">↗ +5% este mês</div>
+			</div>
+			<div class="card">
+				<div class="card-head">Treinos ativos</div>
+				<div class="card-value">28</div>
+				<div class="card-foot">↗ +3 este mês</div>
+			</div>
+		</section>
+
+		<section class="charts">
+			<div class="panel chart-panel">
+				<h3>Receita Mensal (R$)</h3>
+				<div class="chart placeholder-line"></div>
+			</div>
+			<div class="panel chart-panel">
+				<h3>Frequência Semanal</h3>
+				<div class="chart placeholder-bar"></div>
+			</div>
+		</section>
+	</main>
+    {{render(layout/footer.html)}}
+</body>
+</html>

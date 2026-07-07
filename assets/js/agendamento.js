@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", () => {
+window.addEventListener("templatePronto", () => {
 
     const lista = document.querySelector(".lista-aulas"); // onde as aulas aparecem
     const titulo = document.querySelector(".titulo-dia");  // título do dia
@@ -18,8 +18,8 @@ document.addEventListener("DOMContentLoaded", () => {
     let reservas = JSON.parse(localStorage.getItem("reservas")) || [];
     let estadoAulas = JSON.parse(localStorage.getItem("estadoAulas")) || {};
     let diaSemanaAtual = localStorage.getItem("diaSelecionado") || "seg";
-
   
+    
     const aulasPorDia = {
         dom: [
             { hora: "07:00", nome: "Boxe", professor: "Eduardo Leal", duracao: 45, vagas: "13 / 15" },
